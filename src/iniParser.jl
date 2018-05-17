@@ -25,6 +25,7 @@ module iniParser
 	# requested paramkey of the defined section on the conf container.
 	function getparam(container::IOStream, section::AbstractString, paramkey::AbstractString)
 
+		seek(container, 1)
 		# defining globaly for later
 		current_section = ""
 		current_key = ""
